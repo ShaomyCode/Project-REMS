@@ -1,0 +1,214 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root{
+	/* FOR DARK THEME	*/
+	--dark-bg: #0f0e17;
+	--dark-headline:#fffffe ;
+	--dark-paragraph:#a7a9be;
+	--dark-button:#ff8906;
+	--dark-button-text:#fffffe;
+
+	/* FOR LIGHT THEME	*/
+	--light-bg:#fffffe;
+	--light-headline:#272343;
+	--light-paaragraph:#2d334a;
+	--light-button:#ffd803;
+	--light-button-text:#272343;
+
+	--border-checker:2px solid red;
+}
+body{
+	font-family: "Open Sans", sans-serif;
+ 	font-weight: 400;
+  	font-style: normal;
+  	width:90%;
+  	margin: auto;
+  	background: var(--dark-bg);
+}
+/*FOR HEADERS: START*/
+header{
+	padding: 1.3vh 0;
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.86);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.8px);
+	-webkit-backdrop-filter: blur(7.8px);
+	border: 1px solid rgba(255, 255, 255, 0.3);	
+}
+.left-wrapper{
+	margin: 0 20px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	color: var(--light-headline);
+
+	img{
+	object-fit: covere;
+	width: 100px;
+	height: 120px;
+	}
+
+	h3{
+		font-weight: 600;
+		font-size: 24px;
+	}
+}
+
+.right-wrapper{
+	display: flex;
+ 	gap: 20px;
+ 	margin: 0 10px;
+
+ 	button{
+ 		padding: 15px;
+ 		text-align: center;
+ 		background: var(--dark-button);
+ 		color: var(--dark-button-text);
+ 		border-radius: 16px;
+ 		box-shadow: 0 3px 3px var(--dark-bg);
+ 		border:none;
+ 		outline:none;
+ 		width: 100px;
+ 		cursor: pointer;
+ 		transition: 0.3s;
+ 		display: block;
+ 	}
+ 	button:hover{
+ 		transform: scale(1.1);
+ 		background: var(--light-bg);
+ 		color: var(--light-button-text);
+ 	}
+}
+
+/*FOR HEADER: END*/
+.DashboardH3{
+	color: var(--dark-button);
+	font-size: 26px;
+	margin: 10px 0;
+}
+/*MAIN: START*/
+.Dashboard-Wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+.Panel-Wrapper{
+	gap: 20px;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.Record-list{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 20px;
+}
+.Card{
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.86);
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.8px);
+	-webkit-backdrop-filter: blur(7.8px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	color: var(--background-color);
+	width: 15rem;
+	padding: 15px;
+	text-align: center;	
+}
+.Pending-list{
+	background: rgba(255, 255, 255, 0.86);
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.8px);
+	-webkit-backdrop-filter: blur(7.8px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	width: 100%;
+	height: 60vh;
+	padding: 20px;
+	text-align: left;
+}
+table{
+	width: 100%;
+	height: calc(60vh - 7vh);
+	border-collapse: collapse;
+	overflow: auto;
+}
+
+table,tr,th{
+
+	padding: 5px;
+	
+}
+/*BUTTON MANAGER*/
+.Button-Manager{
+	width: 15%;
+	border-radius: 20px;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.86);
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.8px);
+	-webkit-backdrop-filter: blur(7.8px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.Button-Card{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	text-align: center;
+
+	a{
+		border-radius: 16px;
+		cursor: pointer;
+		border:none;
+		outline: none;
+		transition: .05s;
+	}
+	img{
+		width: 140px;
+		height: auto;
+		object-fit: contain;
+		border-radius: 16px;
+	}
+
+}
+.Button-Card a:hover{
+	transform: scale(1.2);
+}
+/*MAIN: END*/
+
+/*LIGHT THEME ERA*/
+.LightTheme{
+	background:var(--light-bg);	
+	
+	header,.Card,.Pending-list,.Button-Manager{
+		box-shadow: 5px 5px 5px black, 1px 1px 2px black;
+
+	}
+	.DashboardH3{
+		color:var(--light-headline);
+	}
+
+}

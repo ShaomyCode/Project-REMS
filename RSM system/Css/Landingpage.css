@@ -1,0 +1,170 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root{
+	/* FOR DARK THEME	*/
+	--dark-bg: #0f0e17;
+	--dark-headline:#fffffe ;
+	--dark-paragraph:#a7a9be;
+	--dark-button:#ff8906;
+	--dark-button-text:#fffffe;
+
+	/* FOR LIGHT THEME	*/
+	--light-bg:#fffffe;
+	--light-headline:#272343;
+	--light-paaragraph:#2d334a;
+	--light-button:#ffd803;
+	--light-button-text:#272343;
+
+	--border-checker:2px solid red;
+}
+body{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width:90%;
+  background: var(--dark-bg);
+  margin: auto;
+}
+header{
+	padding: 1.5vh;
+	margin:20px 0;
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.52);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.8px);
+	-webkit-backdrop-filter: blur(7.8px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.Title-Icon img{
+	object-fit: cover;
+	height: auto;
+	
+}
+a,li{
+	color: white;
+	text-decoration: none;
+	padding:10px;
+	list-style: none;
+	display: block;
+	border-radius: 10px;
+	transition: 0.4s;
+}
+a:hover{
+	background:#0f0e17;
+	font-weight: 1000;
+	color: white;
+}
+.Main-Nav{
+	position: relative;
+	width: 70%;
+	margin: auto;
+}
+.Main-Nav ul{
+	display: flex;
+	justify-content: space-around;
+}
+.Main-Nav ul li{
+	list-style: none;
+}
+.Main-Nav ul li a,.Sub-Nav ul li a{
+	display: inline-block;
+}
+.Right-Wrapper{
+	display: flex;
+	gap: 20px;
+
+	a:nth-child(2){
+		background: #ff8906;
+		border-radius: 20px;
+		width: 10rem;
+		text-align: center;
+		color: white;
+	}
+}
+/*MENU-ITEMS*/
+.submenu{
+	display: none;
+	position: absolute;
+	width: 10%;
+	top: 160px;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.52);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.8px);
+	-webkit-backdrop-filter: blur(7.8px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.Residentials{
+	left:23rem;
+}
+.Properties{
+	left: 40rem;
+}
+.Sub-Nav{
+	display: flex;
+	align-items: center;
+}
+
+/*FEATURE: 1*/
+.Feature-1{
+	height:50vh;
+	margin: 50px auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	.Caption{
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		h3{
+		
+			font-weight: 600;
+			font-size: 3.5rem;
+			color: #fffffe;
+		}
+		p{
+			font-size: 16px;
+			color: #a7a9be;
+		}
+	}
+	.Visual video{
+		height: 50vh;
+		object-fit: cover;
+		width: 700px;
+	}
+}
+
+/*FOOTER*/
+footer{
+	
+	margin: auto;
+	background: white;
+	position: relative;
+	bottom: 10px;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.52);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.8px);
+	-webkit-backdrop-filter: blur(7.8px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	ul{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
